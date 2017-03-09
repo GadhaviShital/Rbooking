@@ -1,0 +1,528 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+	<div class="container">
+		<h1 class="pull-left">Admin View</h1>
+	</div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container content">
+	<div class="row">
+    <div ng-include = "'side-menu.html'"/>
+    <!-- Begin Content -->
+    <div class="col-md-9 admin-form">
+		<!-- Checkout-Form -->
+		<form action="#" id="sky-form" class="sky-form">
+			<header>Update Resturaunt Information</header>
+
+			<fieldset>
+				<div class="row">
+					<section class="col col-9">
+						<label class="input">
+							<input type="text" name="resturauntName" ng-model = "restaurant.name" placeholder="Resturaunt name">
+						</label>
+					</section>
+				</div>
+
+				<div class="row">
+					<section class="col col-9">
+						<label for="file" class="input">
+							<input type="text" id="file" placeholder="Address"  ng-model = "restaurant.address">
+						</label>
+					</section>
+					<section class="col col-4">
+						<label class="input">
+							<input type="text" name="city" placeholder="City"  ng-model = "restaurant.city">
+						</label>
+					</section>
+					<section class="col col-2">
+						<label class="input">
+							<input type="text" name="state" placeholder="State"  ng-model = "restaurant.state">
+						</label>
+					</section>
+					<section class="col col-3">
+						<label class="input">
+							<input type="text" name="code" placeholder="Zip code"  ng-model = "restaurant.zipcode">
+						</label>
+					</section>
+					<section class="col col-6">
+						<label class="input">
+							<input type="email" name="email" placeholder="E-mail"  ng-model = "restaurant.email">
+						</label>
+					</section>
+					<section class="col col-6">
+						<label class="input">
+							<input type="tel" name="phone" placeholder="Phone"  ng-model = "restaurant.phoneNumber">
+						</label>
+					</section>
+					<section class="col col-6">
+						<h3>Operating Hours:</h3>
+					</section>
+
+					<section class="col col-6">
+						Monday
+						<label class="select">
+							<select name="country" ng-model = "monday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+    						<select name="country" ng-model = "monday.endTime">
+    							<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+    						</select>
+    						<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Tuesday
+						<label class="select">
+							<select name="country" ng-model = "tuesday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "tuesday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Wednesday
+						<label class="select">
+							<select name="country" ng-model = "wednesday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "wednesday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Thursday
+						<label class="select">
+							<select name="country" ng-model = "thursday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "thursday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Friday
+						<label class="select">
+							<select name="country" ng-model = "friday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "friday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Saturday
+						<label class="select">
+							<select name="country" ng-model = "saturday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "saturday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<section class="col col-6">
+						Sunday
+						<label class="select">
+							<select name="country" ng-model = "sunday.startTime">
+								<option value="" selected disabled>Open</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+						<label class="select">
+							<select name="country" ng-model = "sunday.endTime">
+								<option value="" selected disabled>Close</option>
+								<option value="0">12:00am</option>
+								<option value="1">01:00am</option>
+								<option value="2">02:00am</option>
+								<option value="3">03:00am</option>
+								<option value="4">04:00am</option>
+								<option value="5">05:00am</option>
+								<option value="6">06:00am</option>
+								<option value="7">07:00am</option>
+								<option value="8">08:00am</option>
+								<option value="9">09:00am</option>
+								<option value="10">10:00am</option>
+								<option value="11">11:00am</option>
+								<option value="12">12:00pm</option>
+								<option value="13">01:00pm</option>
+								<option value="14">02:00pm</option>
+								<option value="15">03:00pm</option>
+								<option value="16">04:00pm</option>
+								<option value="17">05:00pm</option>
+								<option value="18">06:00pm</option>
+								<option value="19">07:00pm</option>
+								<option value="20">08:00pm</option>
+								<option value="21">09:00pm</option>
+								<option value="22">10:00pm</option>
+								<option value="23">11:00pm</option>
+								<option value="24">12:00pm</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+				</div>
+				<div class="row">
+					<div class="col col-9">
+						<input class="btn btn-primary"  type = "button" value="Save" ng-click="update()"></button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+    </div>
+</div><!--/container-->
+<!--=== End Content Part ===-->

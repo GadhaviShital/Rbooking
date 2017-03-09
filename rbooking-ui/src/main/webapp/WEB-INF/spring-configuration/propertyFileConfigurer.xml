@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ /***************************************************************************
+  ~  *
+  ~  *
+  ~  *  Copyright (c) 2014 Philips Lighting BV
+  ~  *  Building EEAp 019, PO Box 80020, 5600JM, Eindhoven, The Netherlands
+  ~  *
+  ~  *  All Rights Reserved
+  ~  *
+  ~  *  P R O P R I E T A R Y    &    C O N F I D E N T I A L
+  ~  *
+  ~  *  *****************************************************
+  ~  *  http://www.teletrol.com/
+  ~  *  *****************************************************
+  ~  *
+  ~  *************************************************************/
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+        <property name="searchSystemEnvironment" value="true" />
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath*:config/envoy.properties</value>
+                <!-- To override properties -->
+                <!-- For windows default location -->
+                <value>file:${eBuildingTVIRoot}/config/override.properties</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

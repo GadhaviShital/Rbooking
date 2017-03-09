@@ -1,0 +1,43 @@
+<div class="container" id="navBox" ng-controller="NavbarCtrl"
+	ng-init="init()">
+	<div class="row">
+		<div class="col-sm-2" id="logo-column">
+			<a class="navbar-brand" href="#"> <img alt="Brand"
+				class="img-responsive"
+				fallback-src="/config/i18n/images/en_US/titlebar_logo.png"
+				ng-src="/config/i18n/images/{{locale.replace('-','_')}}/titlebar_logo.png" />
+			</a>
+		</div>
+		<div class="col-sm-10" id="navbar-content-column">
+			<div class="row" id="search-row">
+				<ul class="list-unstyled list-inline">
+					<li><h2 id="client-title">RBooking</h2></li>
+					<li class="pull-right" id="search-list">
+						<ul class="nav navbar-nav">
+							<li class="username">CurrentLoggedInUser</li>
+							<li><a href="#" id="login_user_signout"
+								ng-click="clearLocalStorage(); logout();">Signout<span
+									class="glyphicon glyphicon-log-out padding-left-05"></span>
+							</a></li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="row" id="navlinks-row">
+				<ul class="list-unstyled list-inline pull-left">
+					<li class="navbar-links" id="dashboard"><a
+						ng-class="{'active':selectedMenu === 'dashboard'}"
+						ng-click="selectedMenu = 'dashboard';"
+						href="#dashboard">Dashboard </a></li>
+					<li class="navbar-links" id="sites"><a
+						ng-class="{'active':selectedMenu === 'dashboard1'}"
+						ng-click="selectedMenu = 'dashboard1';"
+						href="#siteslist">Dashboard1 </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

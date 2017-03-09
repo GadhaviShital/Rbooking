@@ -1,0 +1,46 @@
+<!-- Contact -->
+<div class="container-fluid contact-container">
+	
+	<div class="row">
+		<div class="col-sm-12 no-padding">
+			<div class="row no-column-space equal-height-columns">
+				<div class="col-sm-4 col-xs-12 contact__right--list text-center no-side-padding equal-height-column">
+					<div class="valign__middle">
+						<ul class="list-unstyled g-mb-20">
+							<li class="first-item">Operating Hours:</li><br />
+							<li class="second-item">Monday: {{monday.startTime}} - {{monday.endTime}}</li><br />
+							<li class="second-item">Tuesday: {{tuesday.startTime}} - {{tuesday.endTime}}</li><br />
+							<li class="second-item">Wednesday: {{wednesday.startTime}} - {{wednesday.endTime}}</li><br />
+							<li class="second-item">Thursday: {{thursday.startTime}} - {{thursday.endTime}}</li><br />
+							<li class="second-item">Friday: {{friday.startTime}} - {{friday.endTime}}</li><br />
+							<li class="second-item">Saturday: {{saturday.startTime}} - {{saturday.endTime}}</li><br />
+							<li class="second-item">Sunday: {{sunday.startTime}} - {{sunday.endTime}}</li><br />
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4 no-padding equal-height-column">
+					<img class="img-responsive contact-img" src="assets/img/exterior.png" alt="">
+				</div>
+				<div class="col-sm-4 col-xs-12 contact__right--list text-center no-side-padding equal-height-column">
+					<div class="valign__middle">
+						<ul class="list-unstyled g-mb-20">
+							<li class="first-item">Address</li>
+							<li class="second-item">{{restaurant.address}} {{restaurant.city}} {{restaurant.state}} {{restaurant.zipcode}}</li>
+						</ul>
+
+						<ul class="list-unstyled g-mb-20">
+							<li class="first-item">Phone number</li>
+							<li class="second-item">{{restaurant.phoneNumber}}</li>
+						</ul>
+
+						<ul class="list-unstyled g-mb-20">
+							<li class="first-item">Email</li>
+							<li class="second-item">{{restaurant.email}}</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

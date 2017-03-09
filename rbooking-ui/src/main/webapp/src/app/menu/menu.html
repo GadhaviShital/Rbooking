@@ -1,0 +1,44 @@
+<!-- Menu -->
+		<section id="menu">
+			<div class="container content-lg">
+				<div class="heading-v20 text-center">
+					<span class="heading-v20__pre-title g-dp-block g-mb-20">Our menu</span>
+					<h2 class="heading-v20__title g-mb-30">Taste this</h2>
+					<i class="heading-v20__icon fa fa-circle g-mb-30" aria-hidden="true"></i>
+				</div>
+				<div>
+				<div class="tab-pane fade in active" id="starters">
+					<div class="row g-mb-50">
+						<div  ng-repeat = "menu in menues">
+						<div class="col-md-6 g-sm-mb-50" ng-if="$index%2==0">
+							<div class="media menu-item">
+							  <a class="media-left" href="#">
+								<img class="media-object menu-item__img rounded-x" src="assets/img/combo.jpg" alt="">
+							  </a>
+							  <div class="media-body menu-item__body">
+								<h4 class="media-heading menu-item__name">{{menues[$index].name}}</h4>
+								<span class="menu-item__price rounded-5x">${{menues[$index].price}}</span>
+								<p class="menu-item__text">{{menues[$index].description}}</p>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-6" ng-if="$index%2==0">
+							<div class="media menu-item">
+							  <a class="media-left" href="#">
+								<img class="media-object menu-item__img rounded-x" src="assets/img/nacho.jpg" alt="">
+							  </a>
+							  <div class="media-body menu-item__body">
+								<h4 class="media-heading menu-item__name">{{menues[$index+1].name}}</h4>
+								<span class="menu-item__price rounded-5x">${{menues[$index+1].price}}</span>
+								<p class="menu-item__text">{{menues[$index+1].description}}</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+					</div>
+
+				</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Menu -->

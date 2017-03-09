@@ -1,0 +1,53 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+  <div class="container">
+    <h1 class="pull-left">Admin View</h1>
+  </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container content">
+  <div class="row">
+    <div ng-include = "'side-menu.html'"/>
+
+          <!-- Begin Content -->
+  				<div class="col-md-9 admin-form">
+  					<!-- Checkout-Form -->
+  					<form action="#" id="sky-form" class="sky-form">
+  						<header>Add A New Menu Item</header>
+
+  						<fieldset>
+  							<div class="row">
+  								<section class="col col-9">
+  									<label class="input">
+  										<input type="text" name="item-name" ng-model = "name" placeholder="Menu Title">
+  									</label>
+  								</section>
+  								<section class="col col-9">
+                    <label class="textarea">
+    									<textarea rows="3" name="info" ng-model = "description" placeholder="Menu Item Description"></textarea>
+    								</label>
+  								</section>
+  							</div>
+                <div class="col-md-6">
+                  <h5>Menu Item Price</h5>
+                  <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" ng-model = "price" class="form-control">
+                    <span class="input-group-addon">.00</span>
+                  </div>
+                </div>
+				<div class="margin-bottom-10"></div>
+				<div class="row">		
+					<section class="col col-9">
+						<input class="btn btn-primary" type="button" value="Save" ng-click="addMenu()"></input>
+					</section>
+				</div>
+                <div class="margin-bottom-10"></div>
+
+  						</fieldset>
+
+            </div>
+  </div>
+</div>

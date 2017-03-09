@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task-3.0.xsd
+	http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+	
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath*:config/rbooking-ws-context.xml" />
+	<context:annotation-config />
+
+	<bean class="org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer" />
+	<bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer" />
+
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	<bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider"/>
+	<bean id="jaxbJsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider" />
+    <bean id="cors-filter" class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
+
+	<bean id="serviceExceptionMapper" class="edu.unh.rbooking.exceptionmapper.ServiceExceptionMapper">
+		<constructor-arg index="0" ref="resourceBundle"/>
+	</bean>
+	
+	<!-- Hibernate Validator Configuration -->
+	<bean id="validationExceptionMapper" class="org.apache.cxf.jaxrs.validation.ValidationExceptionMapper"/>
+	<bean id="validationProvider" class="org.apache.cxf.validation.BeanValidationProvider" />
+
+	<bean id="validationInInterceptor" class="org.apache.cxf.jaxrs.validation.JAXRSBeanValidationInInterceptor">
+		<property name="provider" ref="validationProvider" />
+	</bean>
+
+	<bean id="validationOutInterceptor" class="org.apache.cxf.jaxrs.validation.JAXRSBeanValidationOutInterceptor">
+		<property name="provider" ref="validationProvider" />
+	</bean>
+	
+	
+	<jaxrs:server id="services" address="/">
+		<jaxrs:inInterceptors>
+			<ref bean="validationInInterceptor"/>
+		</jaxrs:inInterceptors>
+		<jaxrs:outInterceptors>
+			<ref bean="validationOutInterceptor"/>
+		</jaxrs:outInterceptors>
+		<jaxrs:serviceBeans>
+			<ref bean = "employeeController"/>
+			<ref bean = "restaurantController"/>
+			<ref bean = "menuController"/>
+			<ref bean = "customerController"/>
+			<ref bean = "reservationController"/>
+			<ref bean = "tableController"/>
+			<ref bean = "timingController"/>
+			<ref bean = "loginController"/>
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<ref bean="serviceExceptionMapper" />
+			<ref bean="jaxbProvider" />
+			<ref bean="jsonProvider" />
+			<ref bean="jaxbJsonProvider" />
+            <ref bean="cors-filter" />
+			<ref bean="validationExceptionMapper"/>
+		</jaxrs:providers>
+	</jaxrs:server>
+
+</beans>

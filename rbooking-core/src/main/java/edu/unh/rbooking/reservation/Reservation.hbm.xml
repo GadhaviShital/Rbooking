@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 3:39:48 PM by Hibernate Tools 5.2.0.Beta1 -->
+<hibernate-mapping>
+    <class name="edu.unh.rbooking.reservation.ReservationDO" table="reservation" catalog="rbooking" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="customer" class="edu.unh.rbooking.customer.CustomerDO" fetch="select" cascade="all">
+            <column name="customer_id" not-null="true" />
+        </many-to-one>
+        <property name="numberPeople" type="java.lang.Integer">
+            <column name="number_people" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="20" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="hasShowup" type="java.lang.Boolean">
+            <column name="has_showup" />
+        </property>
+        <bag name="reservationTableMappings" table="reservation_table_mapping" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reservation_id" not-null="true" />
+            </key>
+            <one-to-many class="edu.unh.rbooking.reservation.ReservationTableMappingDO" />
+        </bag>
+    </class>
+</hibernate-mapping>

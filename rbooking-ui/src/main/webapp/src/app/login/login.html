@@ -1,0 +1,36 @@
+<div class="login-section">
+    <div class="container content-md">
+      <div class="margin-bottom-60 head">
+        <h1 style="text-align:center;">Login</h1>
+      </div>
+
+      <div class="row space-xlg-hor equal-height-columns">
+        <!--login Block-->
+        <div class="form-block login-block col-md-6 col-md-offset-3 col-sm-12 rounded-left equal-height-column purple">
+          <div class="form-block-header">
+            <h2 class="margin-bottom-15">Sign In</h2>
+          </div>
+		  {{login | json}}
+          <div class="input-group margin-bottom-20">
+            <span class="input-group-addon rounded-left"><i class="icon-user color-white"></i></span>
+            <input type="text" class="form-control rounded-right" ng-model = "userName" placeholder="Username">
+          </div>
+
+          <div class="input-group margin-bottom-20">
+            <span class="input-group-addon rounded-left"><i class="icon-lock color-white"></i></span>
+            <input type="password" class="form-control rounded-right" ng-model = "password" placeholder="Password">
+          </div>
+
+          <div class="row margin-bottom-70">
+            <div class="col-md-12">
+              <button type="submit" class="btn-u btn-block rounded green" ng-click="login()">Sign In</button>
+            </div>
+          </div>
+        </div>
+        <!--End login Block-->
+
+
+      </div>
+    </div><!--/container-->
+ </div>
+ <!--=== End Content Part ===-->

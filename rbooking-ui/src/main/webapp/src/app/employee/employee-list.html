@@ -1,0 +1,61 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs" ng-init="getAll()">
+  <div class="container">
+    <h1 class="pull-left">Admin View</h1>
+  </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container content">
+  <div class="row">
+    <div ng-include = "'side-menu.html'"/>
+    <!-- Begin Content -->
+    <div class="col-md-9">
+
+<div class="container-fluid content">
+<div class="row">
+<!-- Begin Sidebar Menu -->
+
+<!-- End Sidebar Menu -->
+
+<!-- Begin Content -->
+<div class="col-md-10 col-md-offset-1">
+<!--Striped and Hover Rows-->
+          <div class="row">
+            <!--Striped Rows-->
+            <div class="col-md-12">
+              <div class="panel panel-sea margin-bottom-40">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-edit"></i>Employee List</h3>
+                </div>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Employee #</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+					  <th>Phone Number</th>
+					  <th>User Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat = "employee in employees">
+                      <td>{{employee.id}}</td>
+					  <td>{{employee.firstName}}</td>
+                      <td>{{employee.lastName}}</td>
+                      <td>{{employee.phoneNumber}}</td>
+					  <td>{{employee.type}}</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!--End Striped Rows-->
+
+</div>
+<!-- End Content -->
+</div>
+</div><!--/container-->
+<!--=== End Content Part ===-->

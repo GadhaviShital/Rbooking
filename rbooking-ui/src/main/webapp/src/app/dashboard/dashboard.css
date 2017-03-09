@@ -1,0 +1,20 @@
+.well
+{
+    background-color : white;
+    border: 0px solid #C5C5C5;
+    border-bottom: 2px solid #C5C5C5;
+    border-radius: 0px;
+}
+.well .header
+{
+    border-right: 1px solid #ccc;
+}
+
+.remove-left-padding
+{
+    padding-left: 0px !important;
+}
+.remove-right-padding
+{
+    padding-right: 0px !important;
+}

@@ -1,0 +1,129 @@
+
+/*****************Header Layout**************/
+
+#navBox{
+    width:80%;
+    min-height:100%;
+    margin-top: 30px;
+}
+#logo-column
+{
+    width:12%;
+}
+#navbar-content-column
+{
+    width:87%;
+
+}
+#search-row{
+    background-color:transparent;
+    border-bottom: 1px solid #ccc;
+}
+#navlinks-row{
+    background-color:transparent;
+    padding-top:20px;
+}
+
+/*****************Navigation Links**************/
+
+.navbar-links
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    border-left:1px solid #ccc;
+}
+
+
+.navbar-links a:link,.navbar-links li a:visited,.navbar-links li a:hover {
+    background-color: rgba(102,102,102,0.0);
+    color: #999999;
+    text-shadow:  0px 10px 8px rgba(255,255,255,1.5);
+    font-weight: bold;
+    display: block;
+    margin: 0 5px 0 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.navbar-links a:hover{
+    color: #151515;
+}
+
+.navbar-links a.active {
+    background-color: rgba(102,102,102,0.0);
+    color: #151515;
+    border-bottom: 2px solid #4983AF;
+}
+.nav {
+}
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    cursor: pointer;
+}
+.dropdown {
+
+}
+.username {
+margin-top: 11px;
+margin-bottom :10px
+}
+.navbar-nav > li > a {
+  padding-top: 10px;
+}
+.dropdown-menu>li>a {
+    color:#428bca;
+    white-space: inherit;
+}
+.dropdown ul.dropdown-menu {
+    border-radius:4px;
+    box-shadow:none;
+    width:220px;
+}
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    z-index: 9;
+}
+/*****************ClientTitle & SearchBox *************/
+#client-title
+{
+
+    color: #ccc;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+    font-weight: bold;
+    display: block;
+    font-size:2em;
+    text-decoration: none;
+
+}
+#search-list
+{
+   padding-top:12px;
+}
+#errorWindow{
+    color:red;
+    font-weight: bold;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  margin-top:20px;
+  height: auto;
+}

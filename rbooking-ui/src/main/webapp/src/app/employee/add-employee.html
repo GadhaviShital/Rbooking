@@ -1,0 +1,81 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+  <div class="container">
+    <h1 class="pull-left">Admin View</h1>
+  </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container content">
+  <div class="row">
+    <div ng-include = "'side-menu.html'"/>
+    <!-- End Sidebar Menu -->
+
+          <!-- Begin Content -->
+  				<div class="col-md-9">
+  					<!-- Checkout-Form -->
+  					<form action="#" id="sky-form" class="sky-form">
+  						<header>Add A New Employee</header>
+
+  						<fieldset>
+  							<div class="row">
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="text" name="fname" ng-model="firstName" placeholder="First name">
+  									</label>
+  								</section>
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="text" name="lname" ng-model ="lastName" placeholder="Last name">
+  									</label>
+  								</section>
+  							</div>
+
+  							<div class="row">
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="email" name="email" ng-model = "email" placeholder="E-mail">
+  									</label>
+  								</section>
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="tel" name="phone" ng-model = "phoneNumber" placeholder="Phone">
+  									</label>
+  								</section>
+
+							</div>
+							<div class="row">
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="text" name="username" ng-model = "userName" placeholder="Username">
+  									</label>
+  								</section>
+  								<section class="col col-6">
+  									<label class="input">
+  										<input type="password" name="password" ng-model = "password" placeholder="Password">
+  									</label>
+  								</section>
+
+							</div>
+							<div class="row">
+  								<section class="col col-6">
+									<h5>Click box to select from dropdown menu:</h5>
+									<label class="select">
+										<select ng-model = "type">
+											<option value="" selected disabled>Select One</option>
+											<option value = "admin">Admin</option>
+											<option value = "server">Server</option>
+											<option value = "manager">Manager</option>
+										</select>
+									</label>
+  								</section>
+							</div>
+							<div class="row">
+								<input class="btn btn-primary" type="button" value="Save" ng-click="addEmployee()"></input>
+							</div>
+  						</fieldset>
+
+            </div>
+  </div>
+</div>

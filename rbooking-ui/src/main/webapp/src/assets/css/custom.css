@@ -1,0 +1,99 @@
+/* Add here all your css styles (customizations) */
+body,.restaurant-header.one-page-header .navbar-nav > li > a,
+.heading-v20__text,.tab-v8 .nav-tabs > li > a,
+.menu-item__name, .menu-item__text{
+  font-size: 16px;
+}
+.menu-item__name:after{
+  left:40%;
+  width: 45%
+}
+.ms-tabs .ms-thumb-frame-selected{
+  width:0!important;
+}
+input.form-control{
+  color:black;
+}
+.title{
+  font-family: 'Bungee Inline', cursive;
+  text-align: center;
+  font-size: 50px;
+}
+.login-section{
+  background-image: url("../img/interior.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: .8;
+  height: 100vh;
+}
+.contact__right--list{
+  height: 70vh !important;
+  padding-top:10%;
+}
+.contact-container{
+  background-color: #35006e;
+}
+.contact-img{
+  padding-left: 27%;
+  padding-top: 15%
+}
+.container.background-image{
+  padding-left:0;
+  padding-right:0;
+}
+.background-image{
+  position: relative;
+  width: 100%;
+}
+.background-image img{
+  height: 100vh;
+  width: 100vw;
+}
+.background-image h1{
+  position: absolute;
+  width:100vw;
+  top:10%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 36px;
+  color:white;
+  line-height: 40px;
+  background: rgba(0,0,0,.5);
+  padding: 50px 0;
+}
+.form-block{
+  padding: 20px;
+}
+.login-section h1, .login-section h2{
+  color:white;
+}
+.login-section h1{
+  font-size: 38px;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px black;
+}
+.login-section h2{
+  font-weight: 900;
+  text-shadow: 2px 2px 5px black;
+}
+.green{
+  background:#396e00;
+}
+.purple{
+  background: #35006e;
+}
+.sky-form .input input{
+  background-color: #396e00;
+  color: white;
+}
+.sky-form .icon-prepend,input.form-control{
+  color:black;
+}
+.menu-item__name{
+    font-size: 20px;
+}
+.admin-form .sky-form .input input{
+  background-color: white;
+  color:black;
+}

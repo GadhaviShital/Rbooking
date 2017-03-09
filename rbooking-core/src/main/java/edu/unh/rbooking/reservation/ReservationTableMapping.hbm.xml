@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 3:39:48 PM by Hibernate Tools 5.2.0.Beta1 -->
+<hibernate-mapping>
+    <class name="edu.unh.rbooking.reservation.ReservationTableMappingDO" table="reservation_table_mapping" catalog="rbooking" optimistic-lock="version">
+        <composite-id name="id" class="edu.unh.rbooking.reservation.ReservationTableMappingIdDO">
+            <key-property name="reservationId" type="int">
+                <column name="reservation_id" />
+            </key-property>
+            <key-property name="tableId" type="int">
+                <column name="table_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="reservation" class="edu.unh.rbooking.reservation.ReservationDO" update="false" insert="false" fetch="select" cascade="all">
+            <column name="reservation_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="table" class="edu.unh.rbooking.table.TableDO" update="false" insert="false" fetch="select" cascade="all">
+            <column name="table_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
